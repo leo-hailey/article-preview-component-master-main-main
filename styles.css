@@ -72,10 +72,23 @@ body {
 }
 
 .share-button {
-    max-width: 20px;
+    font-size: 1rem;
+    padding: 8px;
     margin-left: auto;
     margin-right: 2rem;
+    background-color: var(--light-grayish-blue);
+    border-radius: 50%;
+    cursor: pointer;
 }
+
+.share-button:active {
+    background-color: var(--desaturated-dark-blue);
+    
+}
+
+/* .share-button .fa-solid .fa-share:active{
+    color: #fff;
+} */
 
 @media  screen and (max-width: 500px) {
     .card-container{
@@ -83,5 +96,8 @@ body {
         flex-direction: column;
         max-width: 80%;
     }
-
+    .share-button {
+        position: relative;
+        left: 1.75rem;
+    }
 }
