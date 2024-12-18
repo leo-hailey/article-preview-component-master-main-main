@@ -170,7 +170,6 @@ main {
 
     .share-menu {
         
-        display: grid;
         height: 50px;
         padding: 5px;
         border-radius: 10px;
