@@ -65,8 +65,8 @@ main {
 
 
 .image img {
-    width: auto;
-    height: 400px;
+    width: 350px;
+    height: auto;
 }
 
 .credit-image img{
@@ -90,13 +90,10 @@ main {
     background-color: var(--light-grayish-blue);
     border-radius: 50%;
     cursor: pointer;
-    color: #597197
+    color: #597197;
+    max-height: 34px;
 }
 
-.share-button:active {
-    background-color: var(--desaturated-dark-blue);
-    
-}
 
 .share-menu{
     background-color: var(--very-dark-grayish-blue);
@@ -114,21 +111,93 @@ main {
     display: grid;
 }
 
-/* .share-button .fa-solid .fa-share:active{
-    color: #fff;
-} */
+.share-menu-button{
+    font-size: 1rem;
+    padding: 9px;
+    margin-left: auto;
+    margin-right: 1rem;
+    margin-top: 1.10rem;
+    background-color: var(--desaturated-dark-blue);
+    border-radius: 50%;
+    max-height: 34px;
+}
+
+.share-menu .social-media {
+    text-align: center;
+    align-content: center;
+    
+}
+.share-menu .social-media span {
+    color: var(--grayish-blue);
+    letter-spacing: 4px;
+}
+
+.share-menu .social-media i {
+    font-size: 20px;
+    padding: 0 5px ;
+}
 
 @media  screen and (max-width: 500px) {
+    
     .card-container{
         flex-direction: column;
         max-width: 80%;
         height: auto;
+    }
+    .image img {
+        max-height: 300px;
     }
 
     .share-button {
         position: relative;
         left: 1.75rem;
     }
-
+    .share-menu {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
     
+
+}
+
+@media screen and (min-width: 501px) {
+    .credits {
+        width: 350px;
+        grid-template-columns: 1fr 4fr 1fr;
+    }
+
+    .share-menu {
+        
+        display: grid;
+        height: 50px;
+        padding: 5px;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 90px;
+        left: 600px;
+        grid-template-columns: 1fr;
+    }
+
+    .share-menu-button {
+        display: none;
+    }
+
+    .share-menu::before {
+        border-top: 15px solid #48556a;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        content: '';
+        position: absolute;
+        width: 0;
+        top: 49px;
+        left: 55px;
+    }
+
+    .share-menu .social-media i {
+        font-size: 15px;
+        padding: 0 5px ;
+    }
 }
